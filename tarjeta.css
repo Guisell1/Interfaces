@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  height: 700px;              
+  margin: 0;
+  background-color: #d5c4c4;
+}
+
+.tarjeta {
+  border: 1px solid #ddd;     
+  box-shadow: 15px 15px 20px rgb(115, 34, 34); 
+  border-radius: 8px;
+  width: 500px;               
+  background: white;
+  text-align: center;
+  overflow: hidden; 
+  padding: 20px;
+  
+}
+.tarjeta button:hover {
+  background-color: #5183b9; 
+}
