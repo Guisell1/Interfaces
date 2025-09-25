@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="https://www.w3schools.com/" target="_blank"/>
+	<style>
+	/* Lo alineamos al centro  */
+	body{
+		text-align: center;
+	}
+	h2{
+
+	}
+    	a {
+        	margin: 4px; padding: 3px; border: 2px solid;
+    	}
+    	button {
+        	margin: 15px;/* Le aumentamos el espacio del margen, asi no se ve muy junto todo*/
+			color: black; /* E cambiamos el color de la letra a negra*/
+    	}
+    	a:link {
+        	border-color: white; /* E cambiamos el color del borde a un blanco*/
+			 background-color: lightblue; /*lE cambiamos el color del fondo*/
+			  color: black; /* E cambiamos el color de la letra a negra*/
+    	}
+    	a:hover {
+        	border-color: lightyellow ;
+			background-color: darkgrey; 
+			color: lightyellow;
+    	}
+    	a:active {
+        	border-color: beige;
+			 background-color: blue; 
+			 color: beige;
+    	}
+    	a:visited {
+        	color: bisque;
+    	}
+    	input:disabled {
+        	background-color: #dddddd;
+    	}
+    	input:enabled {
+        	background-color:aliceblue;
+    	}
+    	input:checked {
+        	idth: 20px; height: 20px;
+    	}
+		 /* Le damos estilo al contenedor, un borde con lineas entrecortadas,
+		 le damos color, lo centramos a la pagina, tiene un padding y un margen */
+		.contenedor{
+			border:3px dashed skyblue;
+			margin: 15px auto;
+			padding: 20px;
+			width: 30%;
+		}
+		
+
+	</style>
+	<script>
+    	function habilitarDeshabilitar(){
+        	   element = document.querySelector("input[type='text']");
+        	   if (element.disabled) {
+            	element.removeAttribute("disabled");
+            	document.getElementsByTagName("button")[0].innerHTML = "Habilitar";
+        	   } else {
+            	element.setAttribute('disabled', '');
+            	document.getElementsByTagName("button")[0].innerHTML = "Deshabilitar";
+        	   }
+    	}
+	</script>
+</head>
+<body>
+	<div class="contenedor">  <!--Añadimos un div, le asignamos una clase asi le damos estilo -->
+		<h2>¿Cual es tu preferido? cuentanos porque</h2> <!-- Le agregamos un h2 asi se ve mas coherente las opciones -->
+		<input type="text" placeholder="Pon algo..." /> <!--Le hemos quitado el disabled por que nos bloquea escribir -->
+	<input type="checkbox" name="checkbox">
+	<label for="checkbox">Selecionar</label>
+	<br/><br/>  
+	<nav>
+    	<a href="/html/">HTML</a> |
+    	<a href="/css/">CSS</a> |
+    	<a href="/js/">JavaScript</a> |
+    	<a href="/python/">Python</a>
+	</nav>
+	<button onclick="habilitarDeshabilitar()">Habilitar</button>
+
+	</div>
+	
+</body>
+</html>
+
+

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+		p{
+			margin-bottom: 15px;
+		}
+    p:first-of-type{
+		text-align: center; /*He centrado el texto del primer parrfo*/
+        font-size: 32px; /*el tamaño de Fuente le he puesto 32*/
+		
+    }
+
+p span {
+      color: blueviolet; /*Le puse un color diferente a la letra inicial*/
+       font-size: 35px;/* modifique el span y solo puse la primera letra, un tamaño mas grande para diferenciarlo*/
+    padding: 10px;/*Tiene un padding asi no se ve muy pegado al div*/
+}
+div{
+	border: 2px dotted blue; /*Puse un borde punteado al div exterior*/
+	border-radius: 15px; /*Les coloque un redondeado en las esquinas */
+	margin: 10px;
+}
+
+div > span {
+    background-color: bisque;
+}
+span + b {
+           margin: 6px;
+       background-color: burlywood;
+    }
+p ~ div {
+           
+           padding: 10px; /* le agregue un espacio de 15 px para que se vea mejor visualmente*/
+           width: 50%;/* le use un ancho de 50% asi no es muy larga*/
+    }
+    </style>
+    </head>
+    <body>  
+    <div >
+           <p>Primer párrafo.</p> <p><span>P</span> rimera palabra del segundo párrafo.</p>
+           <div>
+               <p>
+                <span>P</span>rimera palabra
+                <b>remarcada</b> <strong>e importante</strong> 
+                dentro de un párrafo más interior</p>
+                <span>Sólo es una frase <b>suelta</b>.</span>
+           </div>
+    </div>       
+    </body>
+</html
+
+
+

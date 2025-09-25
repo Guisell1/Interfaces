@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pseudo-elementos en acción</title>
+<style>
+  body {
+    font-family: Arial, sans-serif; /* agregué fuente más legible */
+    line-height: 1.6;
+    background: #f9f9f9; /* fondo clarito para que resalten los elementos */
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center; /* lo centré */
+    color: darkblue; /* le puse azul oscuro */
+  }
+
+  p {
+    position: relative; /* necesario para que el ::before se coloque bien */
+    margin: 20px auto;
+    padding: 14px 14px 14px 44px; /* agregué espacio a la izquierda para el icono */
+    border: 1px solid #ccc; /* borde gris */
+    border-radius: 10px; /* esquinas redondeadas */
+    background: #fff; /* fondo blanco tipo tarjeta */
+    max-width: 600px; /* no se hace demasiado ancho */
+  }
+
+  /* icono antes del texto */
+  p::before {
+    content: "ℹ"; /* agregué un icono de información */
+    position: absolute;
+    left: 12px; top: 12px; /* lo coloqué al inicio del párrafo */
+    color: crimson; /* lo pinté rojo */
+    font-size: 18px; /* lo hice un poco más grande */
+  }
+
+  /* icono después del texto */
+  p::after {
+    content: " ➤"; /* flechita al final */
+    color: crimson; /* mismo rojo que antes */
+    font-size: 1.2em; /* más grande que el texto normal */
+  }
+
+  /* primera letra y primera línea */
+  p::first-letter {
+    font-size: 200%; /* letra inicial más grande */
+    color: purple; /* la pinté morada */
+    font-weight: bold; /* en negrita */
+  }
+  p::first-line {
+    font-weight: bold; /* primera línea destacada en negrita */
+  }
+
+  /* lista */
+  ul {
+    list-style: inside;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  li {
+    margin: 8px 0;
+    padding: 6px 8px;
+    border-radius: 8px; /* esquinas redondeadas en hover */
+    transition: background-color 0.3s; /* transición suave */
+  }
+  li::marker {
+    content: "► "; /* cambié el punto por una flechita */
+    color: crimson; /* flechita en rojo */
+  }
+  li:hover {
+    background: #f1f1ff; /* al pasar el ratón se pone lila claro */
+  }
+
+  /* selección de texto */
+  ::selection {
+    background: yellow; /* el fondo de lo seleccionado es amarillo */
+    color: red; /* y el texto seleccionado en rojo */
+  }
+</style>
+</head>
+<body>
+  <h1>Pseudo-elementos en acción</h1>
+
+  <p>
+    Este primer párrafo es bastante importante. Y lo voy a hacer lo más largo posible
+    ya que quiero que se remarque su primera línea. Y si no muestra varias líneas
+    pues no lo vamos a notar.
+  </p>
+
+  <ul>
+    <li>Primer Elemento</li>
+    <li>Segundo Elemento</li>
+    <li>Tercer Elemento</li>
+  </ul>
+</body>
+</html>

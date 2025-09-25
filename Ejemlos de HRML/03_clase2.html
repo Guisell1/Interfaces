@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /*  */
+
+    body { /* Añadimos un estilo basico al body, margen, un espacio entre las lineas, y una fuente a la tipografia */
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.3;
+  text-align: center; /* ponemos el texto en medio */
+}
+
+.especial { /*Le ponemos un fondo de color, y un margen */
+  background: #e0f7fa;
+
+  margin-top: 10px;
+}
+.contenedor {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 15px auto; /* centrado horizontal */
+  background: rgb(190, 175, 175);
+  width: 50%;
+  text-align: center; /* centra el texto dentro */
+  border-radius: 10px; /* bordes redondeados */
+}
+
+
+
+    .resaltado.subrayado {
+      color: red;
+      text-decoration: underline;
+    }
+    
+    p.resaltado {
+      font-weight: bold;
+    }
+     /* Hemos borrado el fondo de color de color amarillo que tenia */
+
+    .resaltado + .especial {
+      padding: 5px;
+      border-style: dashed;
+      border-color: aqua;
+    }
+    .resaltado{  text-align: center;}
+
+  </style>
+</head>
+<body>
+  <p class="resaltado">Párrafo resaltado.</p> <p class="resaltado subrayado">Párrafo resaltado y subrayado</p>
+  <div class="contenedor">
+    <p class="resaltado">Resaltado dentro de contenedor</p>
+  </div>
+  <p class="resaltado">Este párrafo contiene resaltado </p> <span class="especial"> Y este texto con clase especial</span>
+</body>
+</html>
+

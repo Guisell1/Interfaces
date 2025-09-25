@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo con ID en CSS</title>
+  <style>
+     /* Cambiamos el punto de fuente a una mas clara, y le damos un color al fondo de la pagina */
+    body{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: #f9f9f9;
+
+    }
+     /*Le añadimos una sombra al titulo  */
+    #tituloPrincipal {
+      color: darkgreen; font-size: 28px; text-align: center;
+      border-bottom: 2px solid darkgreen; padding-bottom: 10px;
+      font-size: 28px;
+      text-shadow: 7px 3px 1px lightblue;
+    }
+    /* le pondr */
+    #parrafoDestacado {
+      background-color: lightyellow; font-style: italic; padding: 10px;
+      border: 1px solid orange; border-radius: 8px;
+    }
+     /* Cuando pasa el raton sobre el div, cambia el color de fondo y el borde al color blanco */
+    #parrafoDestacado:hover{
+      background-color: pink;
+      cursor: pointer;
+      border-color: white;
+     
+    }
+  </style>
+</head>
+<body>
+  
+  <h1 id="tituloPrincipal">Este es el título principal</h1>
+
+  
+  <p id="parrafoDestacado">Este párrafo está destacado con un identificador único.</p>
+
+  
+  <p>Este párrafo no tiene ID, así que no recibe el estilo especial.</p>
+</body>
+</html>
+
